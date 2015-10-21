@@ -45,6 +45,7 @@
         <dep.hadoop.version>0.20.2</dep.hadoop.version>
         <dep.hive.version>0.13.1</dep.hive.version>
         <dep.thrift.version>0.9.1</dep.thrift.version>
+        <dep.guava.version>11.0.2</dep.guava.version>
     </properties>
 
     <dependencies>
@@ -89,6 +90,17 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${dep.guava.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>jsr305</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
 
         <dependency>
             <groupId>org.apache.hive</groupId>
@@ -197,20 +209,12 @@
                     <artifactId>jetty</artifactId>
                 </exclusion>
                 <exclusion>
-                    <groupId>com.google.guava</groupId>
-                    <artifactId>guava</artifactId>
-                </exclusion>
-                <exclusion>
                     <groupId>com.jolbox</groupId>
                     <artifactId>bonecp</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>com.twitter</groupId>
                     <artifactId>parquet-hadoop-bundle</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>com.google.code.findbugs</groupId>
-                    <artifactId>jsr305</artifactId>
                 </exclusion>
                 <exclusion>
                     <groupId>net.sf.opencsv</groupId>
