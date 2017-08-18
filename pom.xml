@@ -602,6 +602,14 @@
                                     <pattern>org.apache.hadoop</pattern>
                                     <shadedPattern>${shadeBase}.org.apache.hadoop</shadedPattern>
                                 </relocation>
+                                <relocation>
+                                    <pattern>org.apache.hive.common</pattern>
+                                    <shadedPattern>${shadeBase}.org.apache.hive.common</shadedPattern>
+                                </relocation>
+                                <relocation>
+                                    <pattern>org.apache.hive.service</pattern>
+                                    <shadedPattern>${shadeBase}.org.apache.hive.service</shadedPattern>
+                                </relocation>
                             </relocations>
                             <filters>
                                 <filter>
